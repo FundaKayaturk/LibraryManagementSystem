@@ -1,0 +1,14 @@
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.csproj.AssemblyReference.cache
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.AssemblyInfoInputs.cache
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.AssemblyInfo.cs
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.csproj.CoreCompileInputs.cache
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/bin/Debug/net8.0/BLL.deps.json
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/bin/Debug/net8.0/BLL.runtimeconfig.json
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/bin/Debug/net8.0/BLL.dll
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/bin/Debug/net8.0/BLL.pdb
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.dll
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/refint/BLL.dll
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.pdb
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.genruntimeconfig.cache
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/ref/BLL.dll
