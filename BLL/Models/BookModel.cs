@@ -18,7 +18,7 @@ namespace BLL.Models
         public string AvailableCopies => Record.AvailableCopies.ToString();
 
         public string TotalCopies => Record.TotalCopies.ToString();
-        public int? AuthorId => Record.AuthorId;
+        public List<int> AuthorId {get; set;}
 
         public string Author => $"{Record.Author?.FirstName} {Record.Author?.LastName}";
 

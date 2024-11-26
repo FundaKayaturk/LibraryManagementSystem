@@ -12,3 +12,4 @@
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.pdb
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.genruntimeconfig.cache
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/ref/BLL.dll
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/Debug/net8.0/BLL.sourcelink.json

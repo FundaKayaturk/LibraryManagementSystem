@@ -264,3 +264,4 @@
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/Debug/net8.0/MVC.pdb
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/Debug/net8.0/MVC.genruntimeconfig.cache
 /Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/Debug/net8.0/ref/MVC.dll
+/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/Debug/net8.0/MVC.sourcelink.json

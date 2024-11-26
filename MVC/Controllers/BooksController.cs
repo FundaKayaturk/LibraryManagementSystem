@@ -53,7 +53,7 @@ namespace MVC.Controllers
         protected void SetViewData()
         {
             // Related items service logic to set ViewData (Record.Id and Name parameters may need to be changed in the SelectList constructor according to the model):
-            ViewData["AuthorId"] = new SelectList(_authorService.Query().ToList(), "Record.Id", "Name");
+            ViewData["AuthorId"] = new SelectList(_authorService.Query().ToList(), "Record.Id", "FullName");
             
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
             //ViewBag.ManyToManyRecordIds = new MultiSelectList(_ManyToManyRecordService.Query().ToList(), "Record.Id", "Name");
@@ -62,10 +62,7 @@ namespace MVC.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
-            var authors = _authorService.Query().ToList();
-            ViewBag.AuthorList = new 
-                SelectList(authors, "Id", "FullName");
-            //SetViewData();
+            SetViewData();
             return View();
         }
 
@@ -85,9 +82,7 @@ namespace MVC.Controllers
                 }
                 ModelState.AddModelError("", result.Message);
             }
-            var authors = _authorService.Query().ToList();
-            ViewBag.AuthorList = new SelectList(authors, "Id", "FullName");
-            //SetViewData();
+            SetViewData();
             return View(book);
         }
 
