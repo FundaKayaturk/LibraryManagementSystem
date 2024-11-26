@@ -7,10 +7,10 @@ namespace BLL.Models
     {
         public Book Record { get; set; }
 
-        public string Title => Record.Title; // Varsayılan ad kullanıcı dostu
+        public string Title => Record.Title;
         
 
-        public string Genre => Record.Genre; // Varsayılan ad kullanıcı dostu
+        public string Genre => Record.Genre;
 
         [DisplayName("Publication Year")]
         public string PublicationYear => Record.PublicationYear.ToString();
@@ -18,7 +18,6 @@ namespace BLL.Models
         public string AvailableCopies => Record.AvailableCopies.ToString();
 
         public string TotalCopies => Record.TotalCopies.ToString();
-        public List<int> AuthorId {get; set;}
 
         public string Author => $"{Record.Author?.FirstName} {Record.Author?.LastName}";
 

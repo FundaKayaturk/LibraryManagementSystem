@@ -15,7 +15,6 @@ namespace BLL.Services
 
     public class AuthorService : ServiceBase, IAuthorService
     {
-        private IAuthorService _authorServiceImplementation;
 
         public AuthorService(Db db) : base(db)
         {
@@ -55,7 +54,7 @@ namespace BLL.Services
             entity.LastName = record.LastName?.Trim();
             entity.Biography = record.Biography;
             _db.Authors.Update(entity);
-            _db.SaveChanges(); // Veritabanına kaydet
+            _db.SaveChanges();
             return Success("Author updated successfully.");
         }
 
@@ -65,11 +64,11 @@ namespace BLL.Services
             if (entity is null)
                 return Error("Author can't be found!");
 
-            if (entity.Books.Any()) // Author'un ilişkili kitapları varsa silme
+            if (entity.Books.Any())
                 return Error("Author has relational books!");
 
             _db.Authors.Remove(entity);
-            _db.SaveChanges(); // Veritabanından sil
+            _db.SaveChanges();
             return Success("Author deleted successfully.");
         }
     }

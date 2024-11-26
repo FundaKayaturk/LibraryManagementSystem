@@ -22,62 +22,59 @@ namespace BLL.Services
         public IQueryable<BookModel> Query()
         {
             return _db.Books
-                .Include(b => b.Author) // Yazar bilgisi dahil edilir
-                .OrderBy(b => b.Title) // Kitap başlıklarına göre sıralanır
-                .ThenBy(b => b.PublicationYear) // Yayın yılına göre sıralama yapılır
-                .Select(b => new BookModel { Record = b }); // BookModel'de yer alan 'Record' olarak döner
+                .Include(b => b.Author)
+                .OrderBy(b => b.Title)
+                .ThenBy(b => b.PublicationYear)
+                .Select(b => new BookModel { Record = b });
         }
         
 
         public ServiceBase Create(Book record)
         {
-            // Eğer aynı başlığa sahip bir kitap varsa hata döner
             if (_db.Books.Any(b => b.Title.ToLower() == record.Title.ToLower().Trim()))
             {
                 return Error("Book with the same title exists!");
             }
 
-            record.Title = record.Title?.Trim(); // Başlıkta gereksiz boşluklar temizlenir
-            _db.Books.Add(record); // Yeni kitap eklenir
-            _db.SaveChanges(); // Değişiklik veritabanına kaydedilir
+            record.Title = record.Title?.Trim();
+            _db.Books.Add(record);
+            _db.SaveChanges();
 
             return Success("Book created successfully.");
         }
 
         public ServiceBase Update(Book record)
         {
-            // Eğer başka bir kitap aynı başlığa sahip ve id farklıysa hata döner
             if (_db.Books.Any(b => b.Id != record.Id && b.Title.ToLower() == record.Title.ToLower().Trim()))
             {
                 return Error("Book with the same title exists!");
             }
 
-            record.Title = record.Title?.Trim(); // Başlıkta gereksiz boşluklar temizlenir
-            _db.Books.Update(record); // Güncelleme işlemi yapılır
-            _db.SaveChanges(); // Değişiklikler kaydedilir
+            record.Title = record.Title?.Trim();
+            _db.Books.Update(record);
+            _db.SaveChanges();
 
             return Success("Book updated successfully.");
         }
 
         public ServiceBase Delete(int id)
         {
-            // Kitap ve ona ait rezervasyonlarla birlikte sorgulanır
             var entity = _db.Books.Include(b => b.Reservations).SingleOrDefault(b => b.Id == id);
     
-            if (entity is null) // Kitap bulunamazsa hata döner
+            if (entity is null)
             {
                 return Error("Book can't be found!");
             }
 
-            // Eğer kitap üzerinde rezervasyonlar varsa, silemezsiniz
+            
             if (entity.Reservations.Any())
             {
                 return Error("Book has active reservations and cannot be deleted!");
             }
 
-            // Kitap silinir
+            
             _db.Books.Remove(entity);
-            _db.SaveChanges(); // Değişiklikler kaydedilir
+            _db.SaveChanges();
 
             return Success("Book deleted successfully.");
         }

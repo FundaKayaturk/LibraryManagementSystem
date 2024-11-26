@@ -8,7 +8,7 @@ namespace BLL.DAL
         public DateTime ReservationDate { get; set; }
         public DateTime ExpiryDate { get; set; }
         
-        public User User { get; set; } // Rezervasyonu yapan kullanıcı
-        public Book Book { get; set; } //Rezervasyonu yapılan kitap
+        public User User { get; set; }
+        public Book Book { get; set; }
     }
 }

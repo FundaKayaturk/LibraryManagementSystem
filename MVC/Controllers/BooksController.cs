@@ -16,21 +16,21 @@ namespace MVC.Controllers
         private readonly IService<Book, BookModel> _bookService;
         private readonly IAuthorService _authorService;
 
-        /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
+        /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
         //private readonly IManyToManyRecordService _ManyToManyRecordService;
 
         public BooksController(
             IService<Book, BookModel> bookService
             , IAuthorService authorService
 
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
+            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
             //, IManyToManyRecordService ManyToManyRecordService
         )
         {
             _bookService = bookService;
             _authorService = authorService;
 
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
+            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
             //_ManyToManyRecordService = ManyToManyRecordService;
         }
 
@@ -55,7 +55,7 @@ namespace MVC.Controllers
             // Related items service logic to set ViewData (Record.Id and Name parameters may need to be changed in the SelectList constructor according to the model):
             ViewData["AuthorId"] = new SelectList(_authorService.Query().ToList(), "Record.Id", "FullName");
             
-            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
+            /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
             //ViewBag.ManyToManyRecordIds = new MultiSelectList(_ManyToManyRecordService.Query().ToList(), "Record.Id", "Name");
         }
 

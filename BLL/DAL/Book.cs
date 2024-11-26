@@ -15,9 +15,9 @@ namespace BLL.DAL
         public int AvailableCopies { get; set; }
         public int TotalCopies { get; set; }
         public int? AuthorId { get; set; }
-        public Author Author { get; set; } // Bir kitap bir yazara aittir
-        public List<Category> CategoriesList { get; set; } = new List<Category>(); // Bir kitap birden fazla kategoriye sahip olabilir
-        public List<Reservation> Reservations { get; set; } = new List<Reservation>(); // Rezervasyonlar
+        public Author Author { get; set; } 
+        public List<Category> CategoriesList { get; set; } = new List<Category>(); 
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>(); 
 
 
     }
