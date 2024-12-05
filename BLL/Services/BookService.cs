@@ -31,6 +31,11 @@ namespace BLL.Services
 
         public ServiceBase Create(Book record)
         {
+            if (record.AvailableCopies > record.TotalCopies)
+            {
+                return Error("Available copies cannot be greater than total copies.");
+            }
+
             if (_db.Books.Any(b => b.Title.ToLower() == record.Title.ToLower().Trim()))
             {
                 return Error("Book with the same title exists!");
@@ -45,6 +50,11 @@ namespace BLL.Services
 
         public ServiceBase Update(Book record)
         {
+            if (record.AvailableCopies > record.TotalCopies)
+            {
+                return Error("Available copies cannot be greater than total copies.");
+            }
+
             if (_db.Books.Any(b => b.Id != record.Id && b.Title.ToLower() == record.Title.ToLower().Trim()))
             {
                 return Error("Book with the same title exists!");
@@ -56,23 +66,20 @@ namespace BLL.Services
 
             return Success("Book updated successfully.");
         }
-
         public ServiceBase Delete(int id)
         {
             var entity = _db.Books.Include(b => b.Reservations).SingleOrDefault(b => b.Id == id);
-    
+
             if (entity is null)
             {
                 return Error("Book can't be found!");
             }
 
-            
             if (entity.Reservations.Any())
             {
                 return Error("Book has active reservations and cannot be deleted!");
             }
 
-            
             _db.Books.Remove(entity);
             _db.SaveChanges();
 

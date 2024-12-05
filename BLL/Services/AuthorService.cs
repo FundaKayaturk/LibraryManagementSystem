@@ -22,7 +22,10 @@ namespace BLL.Services
 
         public IQueryable<AuthorModel> Query()
         {
-            return _db.Authors.OrderBy(a => a.FirstName).ThenBy(a => a.LastName).Select(a => new AuthorModel() { Record = a});
+            return _db.Authors
+                .OrderBy(a => a.FirstName)
+                .ThenBy(a => a.LastName)
+                .Select(a => new AuthorModel() { Record = a});
             
         }
 
