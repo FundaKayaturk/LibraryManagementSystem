@@ -23,6 +23,8 @@ namespace BLL.Services
         {
             return _db.Books
                 .Include(b => b.Author)
+                .Include(b => b.BookCategories)
+                .ThenInclude(bc => bc.Category)
                 .OrderBy(b => b.Title)
                 .ThenBy(b => b.PublicationYear)
                 .Select(b => new BookModel { Record = b });
@@ -59,16 +61,24 @@ namespace BLL.Services
             {
                 return Error("Book with the same title exists!");
             }
-
-            record.Title = record.Title?.Trim();
-            _db.Books.Update(record);
+            
+            var entity = _db.Books.Include(b => b.BookCategories).SingleOrDefault(b => b.Id == record.Id);
+            if (entity is null)
+                return Error("Book not found!");
+            _db.BookCategories.RemoveRange(entity.BookCategories);
+            entity.Title = record.Title?.Trim();
+            entity.PublicationYear = record.PublicationYear;
+            entity.AvailableCopies = record.AvailableCopies;
+            entity.TotalCopies = record.TotalCopies;
+            entity.AuthorId = record.AuthorId;
+            entity.BookCategories = record.BookCategories;
+            _db.Books.Update(entity);
             _db.SaveChanges();
-
             return Success("Book updated successfully.");
         }
         public ServiceBase Delete(int id)
         {
-            var entity = _db.Books.Include(b => b.Reservations).SingleOrDefault(b => b.Id == id);
+            /*var entity = _db.Books.Include(b => b.Reservations).SingleOrDefault(b => b.Id == id);
 
             if (entity is null)
             {
@@ -78,9 +88,9 @@ namespace BLL.Services
             if (entity.Reservations.Any())
             {
                 return Error("Book has active reservations and cannot be deleted!");
-            }
+            }*/
 
-            _db.Books.Remove(entity);
+            /*_db.Books.Remove(entity);*/
             _db.SaveChanges();
 
             return Success("Book deleted successfully.");

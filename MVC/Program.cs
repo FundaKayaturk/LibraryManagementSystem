@@ -5,18 +5,20 @@ using BLL.Services.Bases;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AppDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-string connectionString = "Host=localhost;Port=5432;Database=Library;Username=postgres;Password=Fundakayaturk";
+// AppSettings:
+var appSettingsSection = builder.Configuration.GetSection(nameof(AppSettings));
+appSettingsSection.Bind(new AppSettings());
+
+// IoC Container
+var connectionString = builder.Configuration.GetConnectionString("Db");
 builder.Services.AddDbContext<Db>(options => options.UseNpgsql(connectionString));
-//builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IService<Book, BookModel>, BookService>();
-
+builder.Services.AddScoped<IService<Category, CategoryModel>, CategoryService>();
 
 var app = builder.Build();
 

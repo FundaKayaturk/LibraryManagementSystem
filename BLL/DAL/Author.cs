@@ -14,7 +14,6 @@ namespace BLL.DAL
         [Required]
         [StringLength(200)]
         public string Biography { get; set; }
-        public string FullName => $"{FirstName} {LastName}";
         public List<Book> Books { get; set; } = new List<Book>();
     }
 }

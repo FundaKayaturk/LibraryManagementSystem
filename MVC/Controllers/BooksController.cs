@@ -17,21 +17,21 @@ namespace MVC.Controllers
         private readonly IAuthorService _authorService;
 
         /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
-        //private readonly IManyToManyRecordService _ManyToManyRecordService;
+        private readonly IService<Category, CategoryModel> _categoryService;
 
         public BooksController(
             IService<Book, BookModel> bookService
             , IAuthorService authorService
 
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
-            //, IManyToManyRecordService ManyToManyRecordService
+            ,IService<Category, CategoryModel> categoryService
         )
         {
             _bookService = bookService;
             _authorService = authorService;
 
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
-            //_ManyToManyRecordService = ManyToManyRecordService;
+            _categoryService = categoryService;
         }
 
         // GET: Books
@@ -56,7 +56,7 @@ namespace MVC.Controllers
             ViewData["AuthorId"] = new SelectList(_authorService.Query().ToList(), "Record.Id", "FullName");
             
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entity name in the controller and views. */
-            //ViewBag.ManyToManyRecordIds = new MultiSelectList(_ManyToManyRecordService.Query().ToList(), "Record.Id", "Name");
+            ViewBag.CategoryIds = new MultiSelectList(_categoryService.Query().ToList(), "Record.Id", "Name");
         }
 
         // GET: Books/Create

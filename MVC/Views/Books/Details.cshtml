@@ -34,14 +34,6 @@
     </div>
     <div class="row mb-3">
         <div class="col-2 fw-bold">
-            @Html.DisplayNameFor(model => model.Genre)
-        </div>
-        <div class="col-10">
-            @Html.DisplayFor(model => model.Genre)
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-2 fw-bold">
             @Html.DisplayNameFor(model => model.PublicationYear)
         </div>
         <div class="col-10">
@@ -74,16 +66,31 @@
     </div>
 
 @* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@
-    @*
-    <div class="row mb-3">
+    
+    @* Way 1: *@
+    @*<div class="row mb-3">
         <div class="col-2 fw-bold">
-            <b>@Html.DisplayNameFor(model => model.ManyToManyRecords)</b>
+            <b>@Html.DisplayNameFor(model => model.CategoryList)</b>
         </div>
         <div class="col-10">
-            @Html.Raw(Model.ManyToManyRecords)
+            @if (Model.CategoryList is not null && Model.CategoryList.Any())
+            {
+                foreach (var categoryItem in Model.CategoryList)
+                {
+                    @(categoryItem.Name + "<br>");
+                }
+            }
+        </div>
+    </div>*@
+    @* Way 2: *@
+    <div class="row mb-3">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Categories)
+        </div>
+        <div class="col-10">
+            @Html.Raw(Model.Categories)
         </div>
     </div>
-    *@
 
     <hr /> 
     <a asp-action="Edit" asp-route-id="@Model.Record.Id">Edit</a>&nbsp;|&nbsp;

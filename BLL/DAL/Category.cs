@@ -12,6 +12,6 @@ namespace BLL.DAL
         [StringLength(100)]
         public string Description { get; set; }
         
-        public List<Book> Books { get; set; } = new List<Book>(); // Bir kategori birden fazla kitaba sahip olabilir
+        public List<BookCategory> BookCategories { get; set; } = new List<BookCategory>(); // Bir kategori birden fazla kitaba sahip olabilir
     }
 }

@@ -10,6 +10,7 @@ namespace BLL.DAL
         public DbSet<Author> Authors { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<BookCategory> BookCategories { get; set; }
         
         public Db(DbContextOptions<Db> options) : base(options)
         {

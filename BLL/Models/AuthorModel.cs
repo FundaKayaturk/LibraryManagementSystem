@@ -7,7 +7,7 @@ namespace BLL.Models
         public Author Record { get; set; }
         public string FirstName => Record.FirstName;
         public string LastName => Record.LastName;
-        public string FullName => $"{FirstName} {LastName}";
+        public string FullName => Record.FirstName + " " + Record.LastName;
         public string Biography => Record.Biography;
         
 

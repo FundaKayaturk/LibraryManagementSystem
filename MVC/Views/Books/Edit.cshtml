@@ -46,13 +46,6 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Genre" class="col-2 col-form-label fw-bold"></label>
-	        <div class="col-10">
-	            <input asp-for="Record.Genre" class="form-control" />
-		        <span asp-validation-for="Record.Genre" class="text-danger"></span>
-	        </div>
-        </div>
-        <div class="row mb-3">
             <label asp-for="PublicationYear" class="col-2 col-form-label fw-bold"></label>
 	        <div class="col-10">
 	            <input asp-for="Record.PublicationYear" class="form-control" />
@@ -75,15 +68,13 @@
         </div>
 
 @* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. *@
-        @*
-        <div class="row mb-3">
-            <label asp-for="ManyToManyRecordIds" class="col-2 col-form-label fw-bold"></label>
-	        <div class="col-10">
-		        <select multiple asp-for="ManyToManyRecordIds" class="form-select" asp-items="ViewBag.ManyToManyRecordIds"></select>
-		        <span asp-validation-for="ManyToManyRecordIds" class="text-danger"></span>
-	        </div>
-        </div>
-        *@
+	    <div class="row mb-3">
+		    <label asp-for="CategoryIds" class="col-2 col-form-label fw-bold"></label>
+		    <div class="col-10">
+			    <select multiple asp-for="CategoryIds" class="form-select" asp-items="ViewBag.CategoryIds"></select>
+			    <span asp-validation-for="CategoryIds" class="text-danger"></span>
+		    </div>
+	    </div>
 
         <hr />
         <div class="row mb-3">
