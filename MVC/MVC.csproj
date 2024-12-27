@@ -22,7 +22,6 @@
     <ItemGroup>
       <Compile Remove="Templates\**" />
       <Compile Remove="Views\Roles\**" />
-      <Compile Remove="Controllers\RolesController.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -84,5 +83,7 @@
       <UpToDateCheckInput Remove="Views\Books\Edit.cshtml" />
       <UpToDateCheckInput Remove="Views\Books\Index.cshtml" />
     </ItemGroup>
+    
+    
 
 </Project>
