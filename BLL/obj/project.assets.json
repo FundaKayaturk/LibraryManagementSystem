@@ -9579,11 +9579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem1/BLL/BLL.csproj",
+      "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem1/BLL/BLL.csproj",
+      "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
       "packagesPath": "/Users/fundakayaturk/.nuget/packages/",
-      "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem1/BLL/obj/",
+      "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/fundakayaturk/.nuget/NuGet/NuGet.Config"

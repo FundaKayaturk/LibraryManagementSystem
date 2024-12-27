@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TlCq4JLu9K8=",
+  "dgSpecHash": "J6o4xwmaVqI=",
   "success": true,
-  "projectFilePath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem1/BLL/BLL.csproj",
+  "projectFilePath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
   "expectedPackageFiles": [
     "/Users/fundakayaturk/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
