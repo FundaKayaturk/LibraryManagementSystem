@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J6o4xwmaVqI=",
+  "dgSpecHash": "FntxWiM9CdA=",
   "success": true,
-  "projectFilePath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
+  "projectFilePath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj",
   "expectedPackageFiles": [
     "/Users/fundakayaturk/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
@@ -81,7 +81,7 @@
     "/Users/fundakayaturk/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
-    "/Users/fundakayaturk/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/fundakayaturk/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/newtonsoft.json.bson/1.0.1/newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/npgsql/8.0.5/npgsql.8.0.5.nupkg.sha512",
     "/Users/fundakayaturk/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.10/npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512",

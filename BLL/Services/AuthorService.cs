@@ -31,15 +31,29 @@ namespace BLL.Services
 
         public ServiceBase Create(Author record)
         {
-            if (_db.Authors.Any(a => a.FirstName.ToUpper() == record.FirstName.ToUpper().Trim() && a.LastName.ToUpper() == record.LastName.ToUpper().Trim()))
-                return Error("An author with the same name already exists!");
-            
-            record.FirstName = record.FirstName?.Trim();
-            record.LastName = record.LastName?.Trim();
-            _db.Authors.Add(record);
-            _db.SaveChanges(); // commit to the database
-            return Success("Author created successfully.");
+            try
+            {
+                // İsim ve soyisim kombinasyonunu kontrol et
+                if (_db.Authors.Any(a => a.FirstName.ToUpper() == record.FirstName.ToUpper().Trim() && a.LastName.ToUpper() == record.LastName.ToUpper().Trim()))
+                    return Error("Aynı isim ve soyisim ile bir yazar zaten mevcut!");
+
+                // İsimleri düzelt
+                record.FirstName = record.FirstName?.Trim();
+                record.LastName = record.LastName?.Trim();
+
+                // Yeni yazarı ekle
+                _db.Authors.Add(record);
+                _db.SaveChanges(); // veritabanına kaydet
+
+                return Success("Yazar başarıyla oluşturuldu.");
+            }
+            catch (Exception ex)
+            {
+                // Hata yönetimi
+                return Error($"Yazar oluşturulurken bir hata oluştu: {ex.Message}");
+            }
         }
+
 
         public ServiceBase Update(Author record)
         {

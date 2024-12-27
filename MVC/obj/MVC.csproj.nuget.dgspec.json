@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj": {}
+    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj": {}
   },
   "projects": {
-    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj": {
+    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
+        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
+        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj",
         "packagesPath": "/Users/fundakayaturk/.nuget/packages/",
-        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/",
+        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/fundakayaturk/.nuget/NuGet/NuGet.Config"
@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -82,14 +86,14 @@
         }
       }
     },
-    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj": {
+    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj",
+        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj",
+        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj",
         "packagesPath": "/Users/fundakayaturk/.nuget/packages/",
-        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/",
+        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/fundakayaturk/.nuget/NuGet/NuGet.Config"
@@ -104,8 +108,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj": {
-                "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj"
+              "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj": {
+                "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj"
               }
             }
           }

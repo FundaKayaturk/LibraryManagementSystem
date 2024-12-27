@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj": {}
+    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj": {}
   },
   "projects": {
-    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj": {
+    "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
+        "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj",
+        "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj",
         "packagesPath": "/Users/fundakayaturk/.nuget/packages/",
-        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/obj/",
+        "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/fundakayaturk/.nuget/NuGet/NuGet.Config"
@@ -56,6 +56,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

@@ -12,9 +12,7 @@ namespace BLL.DAL
         
         [Range(0, int.MaxValue, ErrorMessage = "Available copies cannot be greater than total copies.")]
         public int AvailableCopies { get; set; }
-
         public int TotalCopies { get; set; }
-        
         
         [Required(ErrorMessage = "Authors is required!")]
         public int? AuthorId { get; set; }

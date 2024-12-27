@@ -4590,6 +4590,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11",
+          "Newtonsoft.Json": "13.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "compile": {
@@ -13195,11 +13196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj",
+      "projectUniqueName": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/MVC.csproj",
+      "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/MVC.csproj",
       "packagesPath": "/Users/fundakayaturk/.nuget/packages/",
-      "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/MVC/obj/",
+      "outputPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/MVC/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/fundakayaturk/.nuget/NuGet/NuGet.Config"
@@ -13214,8 +13215,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj": {
-              "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystem/BLL/BLL.csproj"
+            "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj": {
+              "projectPath": "/Users/fundakayaturk/RiderProjects/LibraryManagementSystemNew/BLL/BLL.csproj"
             }
           }
         }
