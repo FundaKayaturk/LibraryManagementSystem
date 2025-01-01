@@ -78,19 +78,13 @@ namespace BLL.Services
         }
         public ServiceBase Delete(int id)
         {
-            /*var entity = _db.Books.Include(b => b.Reservations).SingleOrDefault(b => b.Id == id);
-
+            var entity = _db.Books.Include(p => p.BookCategories).SingleOrDefault(p => p.Id == id);
             if (entity is null)
-            {
-                return Error("Book can't be found!");
-            }
+                return Error("Product not found!");
+            
+            _db.BookCategories.RemoveRange(entity.BookCategories);
 
-            if (entity.Reservations.Any())
-            {
-                return Error("Book has active reservations and cannot be deleted!");
-            }*/
-
-            /*_db.Books.Remove(entity);*/
+            _db.Books.Remove(entity);
             _db.SaveChanges();
 
             return Success("Book deleted successfully.");
